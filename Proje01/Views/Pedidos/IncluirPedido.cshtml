@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewBag.Title = "IncluirPedido";
+}
+
+<h2>Incluir um novo Pedido</h2>
+<br />
+<br />
+
+   Mensagem: @ViewData["Msg"]
+
+<br />
+<br />
+@using (Html.BeginForm())
+{
+    <table width="400">
+        <tr>
+            <td width="150">@Html.Label("Codigo do Pedido")</td>
+            <td width="250">@Html.TextBox("id")</td>
+        </tr>
+        <tr>
+            <td>@Html.Label("Data do Pedido")</td>
+            <td>@Html.TextBox("data")</td>
+        </tr>
+        <tr>
+            <td>@Html.Label("Produto")</td>
+            <td>@Html.TextBox("prod")</td>
+        </tr>
+        <tr>
+            <td>@Html.Label("Quantidade")</td>
+            <td>@Html.TextBox("qtd")</td>
+        </tr>
+    </table>
+    <br />
+    <input type="submit" value="Incluir" />
+}
+
